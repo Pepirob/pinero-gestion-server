@@ -12,9 +12,16 @@ const clientSchema = new Schema(
             required: [true, 'Por favor, introduzca un nombre.'],
             trim: true
         },
-        surname: {
+        lastName: {
             type: String,
             required: [true, 'Por favor, introduzca un apellido.'],
+            trim: true
+        },
+        email: {
+            type: String,
+            required: [true, 'Email is required.'],
+            unique: true,
+
             trim: true
         },
         dni: {
@@ -33,14 +40,10 @@ const clientSchema = new Schema(
             type: Number,
             required: [true, 'Por favor, introduzca un código postal.']
         },
-        email: {
-            type: String,
-            required: [true, 'Email is required.'],
-            unique: true,
-
-            trim: true
+        phone1: {
+            type: Number,
         },
-        phone: {
+        phone2: {
             type: Number,
         }
     },
